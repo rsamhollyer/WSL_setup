@@ -15,7 +15,7 @@ If you want to skip this, hit your `Windows` key and type in `msinfo32`
 Scroll to the bottom and you'll see something like this. You want have `Yes` for all 4 options.
 ![image](./images/check-hyperv-support.jpg)
 
-The line `Virtualization Enabled in Firmware` is the ONLY line that you can possibly change and this is done through a BIOS option.
+The line `Virtualization Enabled in Firmware` is the ONLY line that you can possibly change and this is done through a BIOS option. If there are other `No`s I'm not sure that you can get this to work.
 
 If this is the case, then you need to reboot your machine and open up your BIOS settings. You usually see this option on the initial POST of your machine bootup. It'll say something along the lines of `Hit F2 to enter Settings`. In my experience, `F2` and `Del` are the buttons that usually work, but check out the motherboard manufacturers website.
 [This article](https://bce.berkeley.edu/enabling-virtualization-in-your-pc-bios.html) explains what settings you need to change to enable Virtualization on your PCU. I'm not aware if you can get around this if you're not able to enable it. Do some Googling!
