@@ -4,10 +4,10 @@ Until 2 days, I had not done this setup. I wanted to go through the process so I
 
 ## WARNING THIS IS ONLY FOR WINDOWS 10
 
-### Hyper-V
+### **Hyper-V**
 
 Check out [this site](https://www.zdnet.com/article/windows-10-tip-find-out-if-your-pc-can-run-hyper-v/)
- for a break down on windows Hyper-V. This is the ability to run virtualized features.
+for a break down on windows Hyper-V. This is the ability to run virtualized features.
 
 If you want to skip this, hit your `Windows` key and type in `msinfo32`
 ![msinfo](./images/msinfo32.png)
@@ -22,21 +22,21 @@ Once you've gone and enabled your CPU to run a virtual enviornment, hit your Win
 If this is the case, then you need to reboot your machine and open up your BIOS settings. You usually see this option on the initial POST of your machine bootup. It'll say something along the lines of `Hit F2 to enter Settings`. In my experience, `F2` and `Del` are the buttons that usually work, but check out the motherboard manufacturers website.
 [This article](https://bce.berkeley.edu/enabling-virtualization-in-your-pc-bios.html) explains what settings you need to change to enable Virtualization on your PCU. I'm not aware if you can get around this if you're not able to enable it. Do some Googling!
 
-### Install WSL - Simplified
+### **Install WSL - Simplified**
 
 I like simple solutions! I used the following 3 guides to get this setup. You will need to download all the most recent Windows updates to get this working.
 
-* [Simplified Installation](https://docs.microsoft.com/en-us/windows/wsl/install-win10#simplified-installation-for-windows-insiders)
+- [Simplified Installation](https://docs.microsoft.com/en-us/windows/wsl/install-win10#simplified-installation-for-windows-insiders)
 
-* [Windows Insider](https://insider.windows.com/en-us/getting-started)
+- [Windows Insider](https://insider.windows.com/en-us/getting-started)
 
-* [Create Linux User](https://docs.microsoft.com/en-us/windows/wsl/user-support)
+- [Create Linux User](https://docs.microsoft.com/en-us/windows/wsl/user-support)
 
 FYI - just do the `wsl --install` for Ubuntu, unless you really want something different that you know how to use.
 
 This is the biggest chunk of time, at least it was for me. I think it took ~2 hours to intall updates and install the `Insider` version of Windows. But YMMV.
 
-### Welcome to Ubuntu
+### **Welcome to Ubuntu**
 
 Hit your Windows key and type `wsl`, and you should see the following.
 ![penguin](./images/wsl.png)
@@ -55,7 +55,12 @@ The first command will take you to your root directory. The second should pop op
 
 My directory has been open for a while and I've done some work, so it looks much different from yours, but that's okay. Inside here is where you will be doing your work. The last bit of stuff to do now is create a directory (folder) for the class. Mine for my cohort was `DigitalCrafts`. I really do not advise coding outside of this environment! All of your work will be done in here. All of your installations will go here. Do yourself this favor! I promise! It sucks otherwise.
 
-### VSCode
+### **Windows Terminal**
+
+Do yourself a favor and download Window's new terminal. Just open the Microsoft store and download it. It will be able to launch your WSL Unbuntu terminal.
+![terminal](./images/terminal.png)
+
+### **VSCode**
 
 Now a caveat to the above statement ( get used to nuanced statements in coding. There is a lot of answers that begin with `it depends`!). You WILL install a copy of VsCode in your normal Windows environment and NOT inside Ubuntu.
 Please, please, please, use VSCode. It is the best IDE for this class and I believe it is required. If you really like another IDE and REALLY know how to use it then you're on your own for the purpose of this guide.
@@ -67,11 +72,11 @@ Open VsCode.
 `Ctrl + Shift + X` will open the extensions window in vscode.
 Install this extension ![remote](./images/exten.png). This is required for your VSCode to work in WSL
 
-### Other items
+### **Other items**
 
 So the above work is the minimum, but lets get a few more things done
 
-#### LinuxBrew
+#### _LinuxBrew_
 
 Go [here](https://docs.brew.sh/Homebrew-on-Linux) to a bit about `HomeBrew`. It's a fabulous little tool for install bash scripts
 
@@ -97,18 +102,18 @@ brew update
 
 You should be good to go. Which is great, because now....
 
-#### Python
+#### _Python_
 
 This is why we use WSL or HomeBrew.
 
 ```bash
 sudo apt -y upgrade &&
-sudo apt install -y python3-pip 
+sudo apt install -y python3-pip
 ```
 
 If you copy and paste that all and hit `Return` it should all run. Check to see if it worked by running `python3 -V` and `pip3 -V`.
 
-#### Node.js
+#### _Node.js_
 
 Again, just going to do this how Mircrosoft [suggests](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl)
 
@@ -133,6 +138,6 @@ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-## Conclusion
+## **Conclusion**
 
 This should get you going in preparation for Day 1. Please attempt this before class. We can try and help you if you need it, but this does take a bit of time! Good luck and happy coding!
