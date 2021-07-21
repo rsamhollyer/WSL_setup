@@ -1,6 +1,6 @@
 # WSL Setup for Day 1
 
-Until 2 days, I had not done this setup. I wanted to go through the process so I could better prepare myself for the first day of class with y'all. This is a simple process, BUT it did take me some times. Other cohort members who have gone through this before might have done something different, so you are welcome to try that route. But this is what I would recommend.
+Until 2 days ago, I had not done this setup. I wanted to go through the process so I could better prepare myself for the first day of class with y'all. This is a simple process, BUT it does take time. Other cohort members who have gone through this before might have done something different, so you are welcome to try that route. But this is what I would recommend.
 
 ## WARNING THIS IS ONLY FOR WINDOWS 10
 
@@ -9,7 +9,7 @@ Until 2 days, I had not done this setup. I wanted to go through the process so I
 Check out [this site](https://www.zdnet.com/article/windows-10-tip-find-out-if-your-pc-can-run-hyper-v/)
 for a break down on windows Hyper-V. This is the ability to run virtualized features.
 
-If you want to skip this, hit your `Windows` key and type in `msinfo32`
+If you don't want to read that, hit your `Windows` key and type in `msinfo32`
 ![msinfo](./images/msinfo32.png)
 
 Scroll to the bottom and you'll see something like this. You want have `Yes` for all 4 options.
@@ -76,35 +76,11 @@ Install this extension ![remote](./images/exten.png). This is required for your 
 
 So the above work is the minimum, but lets get a few more things done
 
-#### _LinuxBrew_
 
-Go [here](https://docs.brew.sh/Homebrew-on-Linux) to a bit about `HomeBrew`. It's a fabulous little tool for install bash scripts
-
-NOW we're going use [this site](https://www.how2shout.com/linux/install-brew-on-wsl-windows-subsystem-for-linux/) for installing the program.
-
-```bash
-sudo apt update
-sudo apt-get install build-essential curl file git
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
-test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
-echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
-```
-
-Whew!
-Now restart your terminal and test it out. Try running
-
-```bash
-brew update
-
-```
-
-You should be good to go. Which is great, because now....
 
 #### _Python_
 
-This is why we use WSL or HomeBrew.
+
 
 ```bash
 sudo apt -y upgrade &&
